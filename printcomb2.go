@@ -7,7 +7,7 @@ func printcomb2() {
 		for b := '0'; b <= '9'; b++ {
 			for c := '0'; c <= '9'; c++ {
 				for d := '0'; d <= '9'; d++ {
-					if c > a{
+					if c > a {
 						z01.PrintRune(a)
 						z01.PrintRune(b)
 						z01.PrintRune(' ')
@@ -23,9 +23,9 @@ func printcomb2() {
 						z01.PrintRune(d)
 						if a != '9' || b != '8' {
 							z01.PrintRune(',')
-						    z01.PrintRune(' ')
+							z01.PrintRune(' ')
 						}
-					}	
+					}
 				}
 			}
 		}
