@@ -3,9 +3,9 @@ package main
 import "github.com/01-edu/z01"
 
 func main(){
-	for i := 97; i <= 122; i++{
-		z01.PrintRune(rune(i))
+	for iRune := 'a'; iRune <= 'z'; iRune++{
+		z01.PrintRune(iRune)
 		}
-	z01.PrintRune('\n')
+
 	z01.PrintRune('\n')	
 }
