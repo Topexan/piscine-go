@@ -87,7 +87,7 @@ func Atoi(s string) int {
 			}
 
 		}
-		
+
 	}
 	return result
 }
