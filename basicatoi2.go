@@ -1,6 +1,6 @@
 package piscine
 
-func BasicAtoi(s string) int {
+func BasicAtoi2(s string) int {
 	var result int = 0
 	runes := []rune(s)
 	for _, j := range runes {
