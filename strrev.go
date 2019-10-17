@@ -8,7 +8,7 @@ func StrRev(s string) string {
 		count++
 		i = i
 	}
-	for l := 0; l <= count/2; l++ {
+	for l := 0; l < count/2; l++ {
 		z = runes[l]
 		runes[l] = runes[count-l-1]
 		runes[count-l-1] = z
