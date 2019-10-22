@@ -3,14 +3,6 @@ package piscine
 func Index(s string, toFind string) int {
 	l1 := StrLen(s)
 	l2 := StrLen(toFind)
-	for j := range arr {
-		l1++
-		j = j
-	}
-	for i := range arrto {
-		l2++
-		i = i
-	}
 	found := true
 	if l2 < 1 {
 		return 0
