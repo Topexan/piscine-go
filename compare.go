@@ -25,21 +25,9 @@ func Compare(a, b string) int {
 			num = l2
 		}
 		for k := 0; k < num; k++ {
-			if runes1var r int = 0
-	for i := range runes {
-		r++
-		i = i
-	}[k] > runes2[k] {
-				returvar r int = 0
-	for i := range runes {
-		r++
-		i = i
-	}n 1
-			} else ifvar r int = 0
-	for i := range runes {
-		r++
-		i = i
-	} runes1[k] < runes2[k] {
+			if runes1[k] > runes2[k] {
+				return 1
+			} else if runes1[k] < runes2[k] {
 				return -1
 			}
 		}
