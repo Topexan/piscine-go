@@ -12,8 +12,6 @@ func TrimAtoi(s string) int {
 		if runes[index] == '-' && runes[index+1] > 47 && runes[index+1] < 58 {
 			isneg++
 			i = i
-			fmt.Println(runes[index+1])
-			fmt.Println("Isneg: ", isneg)
 		}
 	}
 
