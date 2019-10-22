@@ -8,7 +8,7 @@ func NRune(s string, n int) rune {
 		i = i
 	}
 	if n < 0 || n > l {
-		return ' '
+		return 0
 	}
 	return word[n-1]
 }
