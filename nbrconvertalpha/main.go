@@ -203,9 +203,11 @@ func main() {
 			} else {
 				z01.PrintRune(' ')
 			}
+			if j == l-1 {
+				z01.PrintRune(10)
+			}
 		}
 	} else {
 		z01.PrintRune(10)
 	}
-	z01.PrintRune(10)
 }
