@@ -12,4 +12,5 @@ func main() {
 	for i := range name {
 		z01.PrintRune(name[i])
 	}
+	z01.PrintRune(10)
 }
