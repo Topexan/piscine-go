@@ -12,7 +12,7 @@ func main() {
 		l++
 		i = i
 	}
-	for j := l-1; j > 0; j-- {
+	for j := l - 1; j > 0; j-- {
 		runes := []rune(arguments[j])
 		for k := range runes {
 			z01.PrintRune(runes[k])
