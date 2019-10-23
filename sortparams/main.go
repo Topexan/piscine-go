@@ -12,23 +12,24 @@ func main() {
 		l++
 		i = i
 	}
-	var runes []rune
-	for j := 1; j < l; j++ {
-		str := []rune(arguments[j])
-		runes = append(runes, str[0])
-	}
-	r := ' '
-	for k := 0; k < l; k++ {
-		for z := k + 1; z < l-1; z++ {
-			if runes[k] > runes[z] {
-				r = runes[k]
-				runes[k] = runes[z]
-				runes[z] = r
+	r := " "
+	for k := 1; k < l; k++ {
+		for z := k + 1; z < l; z++ {
+			str1 := []rune(arguments[k])
+			str2 := []rune(arguments[z])
+			rune1 := str1[0]
+			rune2 := str2[0]
+			if rune1 > rune2 {
+				r = arguments[k]
+				arguments[k] = arguments[z]
+				arguments[z] = r
 			}
 		}
 	}
-	for x := range runes {
-		z01.PrintRune(runes[x])
+	for j := 1; j < l; j++ {
+		strfin := []rune(arguments[j])
+		runefin := strfin[0]
+		z01.PrintRune(runefin)
 		z01.PrintRune(10)
 	}
 }
