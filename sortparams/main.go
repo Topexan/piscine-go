@@ -12,12 +12,11 @@ func main() {
 		l++
 		i = i
 	}
-	runes := make([]rune, l-1)
+	var runes []rune
 	for j := 1; j < l; j++ {
 		str := []rune(arguments[j])
-		runes[j-1] = str[0]
+		runes = append(runes, str[0])
 	}
-
 	r := ' '
 	for k := 0; k < l; k++ {
 		for z := k + 1; z < l-1; z++ {
@@ -32,6 +31,4 @@ func main() {
 		z01.PrintRune(runes[x])
 		z01.PrintRune(10)
 	}
-
-	//	z01.PrintRune(rune(l))
 }
