@@ -1,26 +1,39 @@
 package piscine
 
 func SplitWhiteSpaces(str string) []string {
-	runes := []rune(str)
-	spaces := 1
-	lrunes := 0
-	for i := range runes {
-		lrunes++
-		if runes[i] == ' ' {
-			spaces++
+	var len = 0
+	var strlLen = 0
+	var start = 0
+	var j = 0
+	var wasLetter = false
+	for _, v := range str {
+		if (v == '\n' || v == '\t' || v == ' ') && wasLetter {
+			len++
+			wasLetter = false
+		} else if v != '\n' && v != '\t' && v != ' ' {
+			wasLetter = true
 		}
+		strlLen++
 	}
-	var words = make([]string, spaces)
-	x := 0
-	for j := 0; j < spaces; j++ {
-		for k := x; k < lrunes; k++ {
-			if runes[k] == ' ' {
-				x++
-				break
+	if wasLetter {
+		len++
+		wasLetter = false
+	}
+	arr := make([]string, len)
+	for i, v := range str {
+		if (v == '\n' || v == '\t' || v == ' ') && wasLetter {
+			arr[j] = str[start:i]
+			j++
+			wasLetter = false
+		} else if v != '\n' && v != '\t' && v != ' ' {
+			if !wasLetter {
+				start = i
 			}
-			x++
-			words[j] = words[j] + string(runes[k])
+			wasLetter = true
 		}
 	}
-	return words
+	if wasLetter {
+		arr[j] = str[start:strlLen]
+	}
+	return arr
 }
